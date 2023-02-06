@@ -1,0 +1,5 @@
+AuthType Basic 
+AuthName "Protected Folder" 
+AuthUserFile /home/j8fezpxanzum/primedtalent.de/databases/.htpasswd
+# AuthUserFile E:\Ismail\Projects\PrimedTalentGermany\databases\.htpasswd
+require valid-user

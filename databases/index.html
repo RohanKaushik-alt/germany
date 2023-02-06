@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primed Talent data</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
+    <style>
+      /* @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap"); */
+      html {
+        /* font-family: Rubik; */
+        font-family: "Montserrat Regular", sans-serif;
+        /* font-family: "Rubik", sans-serif; */
+ 
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 1000px;
+      }
+
+      table td,
+      table th {
+        border: 1px solid #ddd;
+        padding: 13px 10px;
+      }
+
+      table thead {
+        background-color: #eb0027;
+        color: white;
+      }
+
+      table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      table th {
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+      }
+      .table_heading_div {
+        margin: 25px 0 0 0;
+        padding: 10px 0;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+      }
+      .table_heading_div .toggle span {
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .toggle {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: rgb(48, 47, 47);
+        user-select: none;
+      }
+      .toggle i {
+        font-size: 20px;
+        margin-left: 10px;
+      }
+      .table_heading_div button {
+        background-color: #eb0027;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        border-radius: 50px;
+      }
+      #symbol {
+        transition: ease 0.3s;
+      }
+      #content,
+      #content2,
+      #content3,
+      #content4 {
+        display: none;
+      }
+      .table-container {
+        max-height: 500px;
+        overflow: auto;
+      }
+      thead {
+        position: sticky;
+        top: 0;
+      }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "453674429985634");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=453674429985634&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <h1 style="text-align: center">Primed Talent Data</h1>
+    <!-- <section>
+      <div class="table_heading_div">
+        <div class="toggle" onclick="toggleContact()" title="Show/Hide">
+          <span>Contact data</span>
+          <i id="symbol" class="fa-solid fa-eye"></i>
+        </div>
+        <button onclick="download_contact()">
+          Download &nbsp; &nbsp;<i class="fa-solid fa-download"></i>
+        </button>
+      </div>
+      <div class="table-container">
+        <table id="content" style="border: 1px solid black">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Email</td>
+              <td>Phone</td>
+              <td>Message</td>
+              <td>How I heard</td>
+              <td>Date & Time</td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </section> -->
+
+    <section>
+      <div class="table_heading_div">
+        <div class="toggle" onclick="toggleAWS()" title="Show/Hide">
+          <span>AWS data</span>
+          <i id="symbol2" class="fa-solid fa-eye"></i>
+        </div>
+        <button onclick="download_aws()">
+          Download &nbsp; &nbsp;<i class="fa-solid fa-download"></i>
+        </button>
+      </div>
+      <div class="table-container">
+        <table id="content2" style="border: 1px solid black">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Email</td>
+              <td>Phone</td>
+              <td>City</td>
+              <td>Cohort Date</td>
+              <td>Experience</td>
+              <td>Message</td>
+              <td>How I heard</td>
+              <td>Date & Time</td>
+              <td>Are You Unemployed Value</td>
+              <td>Are You Registered In Job Centre</td>
+              <td>Are You Registered In Employment Centre </td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </section>
+
+    <div class="table_heading_div">
+      <div class="toggle" onclick="toggleCloudComputing()" title="Show/Hide">
+        <span>Cloud Computing Data</span>
+        <i id="symbol3" class="fa-solid fa-eye"></i>
+      </div>
+      <button onclick="DownloadCloudComputing()">
+        Download &nbsp; &nbsp;<i class="fa-solid fa-download"></i>
+      </button>
+    </div>
+    <div class="table-container">
+      <table id="content3" style="border: 1px solid black">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Location</td>
+            <td>SelectCourse</td>
+            <td>Message</td>
+            
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </section>
+
+    <!-- <section>
+      <div class="table_heading_div">
+        <div class="toggle" onclick="toggleStaffing()" title="Show/Hide">
+          <span>Staffing Expertise data</span>
+          <i id="symbol3" class="fa-solid fa-eye"></i>
+        </div>
+        <button onclick="download_staffing()">
+          Download &nbsp;&nbsp; <i class="fa-solid fa-download"></i>
+        </button>
+      </div>
+      <div class="table-container">
+        <table id="content3" style="border: 1px solid black">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Email</td>
+              <td>Phone</td>
+              <td>Company</td>
+              <td>No of employees</td>
+              <td>How I heard</td>
+              <td>Date & Time</td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </section> -->
+
+    <!-- <section>
+      <div class="table_heading_div">
+        <div class="toggle" onclick="toggleWebinar()" title="Show/Hide">
+          <span>Webinar data</span>
+          <i id="symbol4" class="fa-solid fa-eye"></i>
+        </div>
+        <button onclick="download_webinar()">
+          Download &nbsp;&nbsp; <i class="fa-solid fa-download"></i>
+        </button>
+      </div>
+      <div class="table-container">
+        <table id="content4" style="border: 1px solid black">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Email</td>
+              <td>Phone</td>
+              <td>LinkedIn URL</td>
+              <td>Date & Time</td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </section> -->
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    // $.getJSON("contact_us.json", function (json) {
+    //   var student = "";
+    //   $.each(json, function (key, value) {
+    //     student += "<tr>";
+    //     student += "<td>" + value.Name + "</td>";
+    //     student += "<td>" + value.Email + "</td>";
+    //     student += "<td>" + value.Phone + "</td>";
+    //     student += "<td>" + value.Message + "</td>";
+    //     student += "<td>" + value.HowIHeard + "</td>";
+    //     student += "<td>" + value.DateTime + "</td>";
+    //     student += "</tr>";
+    //   });
+    //   $("#content").append(student);
+    // });
+    $.getJSON("aws.json", function (json) {
+      var student = "";
+      $.each(json, function (key, value) {
+        student += "<tr>";
+        student += "<td>" + value.Name + "</td>";
+        student += "<td>" + value.Email + "</td>";
+        student += "<td>" + value.Phone + "</td>";
+        student += "<td>" + value.City + "</td>";
+        student += "<td>" + value.Date + "</td>";
+        student += "<td>" + value.Experience + "</td>";
+        student += "<td>" + value.Message + "</td>";
+        student += "<td>" + value.How + "</td>";
+        student += "<td>" + value.DateTime + "</td>";
+        student += "<td>" + value.AreYouUnemployedValue + "</td>";
+        student += "<td>" + value.AreYouRegisteredInJobCentreValue + "</td>";
+        student += "<td>" + value.AreYouRegisteredInEmploymentCentreValue + "</td>";
+        student += "</tr>";
+      });
+      $("#content2").append(student);
+    });
+
+    $.getJSON("cloud_Computing.json", function (json) {
+      var student = "";
+      $.each(json, function (key, value) {
+        student += "<tr>";
+        student += "<td>" + value.Name + "</td>";
+        student += "<td>" + value.Email + "</td>";
+        student += "<td>" + value.Phone + "</td>";
+        student += "<td>" + value.Location + "</td>";
+        student += "<td>" + value.SelectCourse + "</td>";
+        student += "<td>" + value.Message + "</td>";
+        student += "</tr>";
+      });
+      $("#content3").append(student);
+    });
+
+    // $.getJSON("staffing_expertise.json", function (json) {
+    //   var student = "";
+    //   $.each(json, function (key, value) {
+    //     student += "<tr>";
+    //     student += "<td>" + value.Name + "</td>";
+    //     student += "<td>" + value.Email + "</td>";
+    //     student += "<td>" + value.Phone + "</td>";
+    //     student += "<td>" + value.Company + "</td>";
+    //     student += "<td>" + value.NoOfEmp + "</td>";
+    //     student += "<td>" + value.HowHear + "</td>";
+    //     student += "<td>" + value.DateTime + "</td>";
+    //     student += "</tr>";
+    //   });
+    //   $("#content3").append(student);
+    // });
+    // $.getJSON("webinar.json", function (json) {
+    //   var student = "";
+    //   $.each(json, function (key, value) {
+    //     student += "<tr>";
+    //     student += "<td>" + value.Name + "</td>";
+    //     student += "<td>" + value.Email + "</td>";
+    //     student += "<td>" + value.Phone + "</td>";
+    //     student += "<td>" + value.LinkedIN + "</td>";
+    //     student += "<td>" + value.DateTime + "</td>";
+    //     student += "</tr>";
+    //   });
+    //   $("#content4").append(student);
+    // });
+  </script>
+  <script src="script.js"></script>
+</html>

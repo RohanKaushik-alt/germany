@@ -1,0 +1,145 @@
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 language="en" class="footerHeading">Office</h3>
+        <h3 language="ge" class="footerHeading">Büros</h3>
+        <hr style="color: white; border: 0; border-top: 1px solid #fff" />
+        <div class="row">
+          <!-- <div class="col-lg-6">
+            <h4 class="footerSubHeading">Europe - London (HQ)</h4>
+            <p class="footerText">
+              27 Old Gloucester Street, London WC1N 3AX, United Kingdom
+            </p>
+          </div> -->
+          <div class="col-lg-6">
+            <h4 class="footerSubHeading"> Germany</h4>
+            <p class="footerText">Leopoldstr. 244, D-80807 München</p>
+          </div>
+        </div>
+        <h3 language="en" class="footerHeading">Follow us on</h3>
+        <h3 language="ge" class="footerHeading">Folge uns auf</h3>
+        <hr style="color: white; border: 0; border-top: 1px solid #fff" />
+        <div class="footerIcons">
+          <a href="mailto:info@primedtalent.de">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/PrimedTalentGermany/"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/primed_talent_gmbh_official/"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/primed-talent-gmbh/"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a target="_blank" href="https://twitter.com/PrimedTalentDE">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.xing.com/pages/primed-talent-germany"
+          >
+            <i class="fab fa-xing"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h3 language="en" class="footerHeading">Services</h3>
+        <h3 language="ge" class="footerHeading">Dienstleistungen</h3>
+        <hr style="color: white; border: 0; border-top: 1px solid #fff" />
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 language="en" class="footerSubHeading">Recruitment</h4>
+            <h4 language="ge" class="footerSubHeading">Rekrutierung</h4>
+            <a language="en" class="footerLink" href="corporate-talent"
+              >Corporate Talent</a
+            >
+            <a language="ge" class="footerLink" href="corporate-talent"
+              >Unternehmenstalent</a
+            >
+            <a language="en" class="footerLink" href="staffing-expertise"
+              >Staffing Expertise</a
+            >
+            <a language="ge" class="footerLink" href="staffing-expertise"
+              >Personalexpertise</a
+            >
+            <a href="../azav-certification.html">
+              <img width="200px" class="mt-5 pt-2" src="../assets/images/FooterImages/acadCertification.png" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <h4 language="en" class="footerSubHeading">Training</h4>
+            <h4 language="ge" class="footerSubHeading">Ausbildung</h4>
+            <a class="footerLink" href="csr-talent">CSR Talent</a>
+            <a class="footerLink" href="aws-restart">AWS re/Start</a>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-lg-12">
+            <h4 class="footerSubHeading">Content</h4>
+            <a class="footerLink" href="digital-content">Digital Content</a>
+            <a class="footerLink" href="learning-management"
+              >Learning Management</a
+            >
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <p language="en" class="footerText mb-0">
+      <span>Primed Talent © 2022</span> |
+      <span><a class="text-white" href="policies">Policies</a></span> |
+      <span><a class="text-white" href="imprint">Imprint</a></span> | 
+      <span><a class="text-white" href="Mission-Statement">Mission Statement</a></span>
+    </p>
+    <p language="ge" class="footerText mb-0">
+      <span>Primed Talent © 2022</span> |
+      <span><a class="text-white" href="policies">Richtlinien</a></span> |
+      <span><a class="text-white" href="impressum">Impressum</a></span> |
+      <span><a class="text-white" href="Mission-Statement">Leitbild</a></span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  if (localStorage.getItem("lang") === null) {
+    localStorage.setItem("lang", "ge");
+  }
+  var lang = localStorage.getItem("lang");
+
+  $("[language]").hide();
+  $(".switch").hide();
+  $("html").show();
+
+  if (lang === "en") {
+    $('[language="en"]').show();
+    $('[language="ge"]').remove();
+    $("#language-toggle").prop("checked", true);
+    $(".switch").show();
+  } else if (lang === "ge") {
+    $('[language="ge"]').show();
+    $('[language="en"]').remove();
+    $("#language-toggle").prop("checked", false);
+    $(".switch").show();
+  }
+
+  $("#language-toggle").change(function () {
+    setTimeout(() => {
+      window.location.reload();
+    }, 300);
+    if (this.checked) {
+      localStorage.setItem("lang", "en");
+    } else if (!this.checked) {
+      localStorage.setItem("lang", "ge");
+    }
+  });
+</script>

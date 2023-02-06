@@ -1,0 +1,663 @@
+<a data-toggle="modal" data-target="#formmodal" class="float-btn shadow-lg sam">
+    <span>Apply Now</span>
+    <i class="fas fa-angle-right"></i>
+    <i class="fas fa-angle-right"></i>
+</a>
+
+<div class="modal fade contmodal" id="formmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true" style="z-index: 100000000">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-cont" role="document">
+      <div class="modal-content">
+        <div class="modal-header mh-cont">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+
+        <br />
+        <form action="../awsprocess.php" class="cuform" method="post" enctype="multipart/form-data">
+          <input type="hidden" data-form-email="true" value="" />
+          <input type="hidden" name="mailsubject" value="AWS Re/Start(Germany)" />
+          <div class="form-group">
+            <label language="en" class="form-control-label">Select Location/Date*</label>
+            <label language="ge" class="form-control-label">Ort/Datum auswählen*</label>
+            <select class="form-control form-inline" name="date" required>
+              <option language="en" value="" disabled selected hidden>
+                Please select
+              </option>
+              <!-- <option language="en" value="Germany(15-October-2022)">
+                Germany(15-October-2022)
+              </option> -->
+              <!-- <option language="ge" value="Deutschland(15-October-2022)">
+                Deutschland(15-October-2022)
+              </option> -->
+
+              <!-- <option language="en" value="Germany(12-December-2022)">
+                Germany(12-December-2022)
+              </option> -->
+              <!-- <option language="ge" value="Deutschland(12-December-2022)">
+                Deutschland(12-December-2022)
+              </option> -->
+              <!-- <option language="en" value="Germany(30-January-2023)">
+                Germany(30-January-2023)
+              </option>
+              <option language="ge" value="Deutschland(30-January-2023)">
+                Deutschland(30-January-2023)
+              </option> -->
+              <option language="en" value="Germany(February-2023)">
+                Germany(February-2023)
+              </option>
+              <option language="ge" value="Deutschland(February-2023)">
+                Deutschland(February-2023)
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label" for="name-form1-2w">Name*</label>
+            <input type="text" class="form-control" name="name" data-form-field="Name" required id="name-form1-2w"
+              pattern="(.*[a-zA-Z].*)" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-control-label" for="email">Email*</label>
+            <input type="email" class="form-control" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-control-label" for="phone">Phone*</label>
+            <input type="tel" class="form-control" name="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label language="en" class="form-control-label" for="city">City*</label>
+            <label language="ge" class="form-control-label" for="city">Stadt*</label>
+            <input type="text" class="form-control" name="city" required pattern="(.*[a-zA-Z].*)" />
+          </div>
+
+          <div class="form-group">
+            <label language="en" class="form-control-label" for="name-form1-2w">Upload resume(Only pdf, jpg, jpeg, png,
+              doc, docx formats are
+              allowed)</label>
+            <label language="ge" class="form-control-label" for="name-form1-2w">Lebenslauf hochladen (Nur die Formate
+              pdf, jpg, jpeg, png, doc,
+              docx sind erlaubt)</label>
+            <input type="file" name="attachment" class="form-control" />
+          </div>
+
+          <div class="form-group mb-0">
+            <label language="en" class="form-control-label" for="message-form1-2w">Do you have work experience?*</label>
+            <label language="ge" class="form-control-label" for="message-form1-2w">Haben Sie
+              Berufserfahrung?*</label><br />
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Exp" id="inlineRadio3" value="Yes" required />
+              <label language="en" class="form-check-label" for="inlineRadio3">Yes</label>
+              <label language="ge" class="form-check-label" for="inlineRadio3">Ja</label>
+            </div>
+            <div class="form-check form-check-inline mr-0">
+              <input class="form-check-input" type="radio" name="Exp" id="inlineRadio4" value="No" required />
+            </div>
+            <label language="en" class="form-check-label" for="inlineRadio4">No</label>
+            <label language="ge" class="form-check-label" for="inlineRadio4">Nein</label>
+          </div>
+
+          <div style="padding: 0px 13px">
+            <div class="form-group">
+              <label language="en" for="years" id="expinplabel">Number of Years and Months*</label>
+              <label language="ge" for="years" id="expinplabel">Anzahl der Jahre und Monate*</label>
+              <div class="row">
+                <div class="col">
+                  <select class="form-control form-inline" name="years" id="expinp">
+                    <option value="" disabled selected hidden>Years*</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="More than 10">More than 10</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <select class="form-control form-inline" name="months" id="expinp2">
+                    <option value="" disabled selected hidden>Months*</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <input class="form-control mt-3 mb-3" type="text" placeholder="Last job role*" name="ljr" id="jobinp" />
+
+            <div class="form-group">
+              <label class="form-control-label" id="secinplabel">Industry*</label>
+              <select class="form-control" id="secinp" name="industry" onchange="checkvalue2(this.value)">
+                <option value="" disabled selected hidden>
+                  Please select
+                </option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="Retail">Retail</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Military">Military</option>
+                <option value="Construction">Construction</option>
+                <option value="Education">Education</option>
+                <option value="Others">Others</option>
+              </select>
+              <input class="form-control mt-3" type="text" placeholder="Please specify*" name="indother"
+                id="indother" />
+            </div>
+          </div>
+
+          <div id="custom-checkbox" class="custom-checkbox mb-3">
+            <div id="custom-checkbox-label" class="custom-checkbox-label form-control form-control-select"
+              onclick="togglecustomcheck()">
+              <span>Select any 2</span>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="custom-checkbox-dropdown" id="custom-checkbox-dropdown">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Above 54 years of age **" id="financial1"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial1">
+                  Above 54 years of age **
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Armed Forces Veteran ***" id="financial2"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial2">
+                  Armed Forces Veteran ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Asylum seeker ***" id="financial3"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial3">
+                  Asylum seeker ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="At risk of becoming NEET ***" id="financial4"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial4">
+                  At risk of becoming NEET ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Criminal convictions ***" id="financial5"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial5">
+                  Criminal convictions ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Disability **" id="financial6"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial6">
+                  Disability **
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="From Employment Deprived Areas ***"
+                  id="financial7" name="financial[]" />
+                <label class="form-check-label" for="financial7">
+                  From Employment Deprived Areas ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="From Remote Rural Areas **" id="financial8"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial8">
+                  From Remote Rural Areas **
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="From Rural Areas **" id="financial9"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial9">
+                  From Rural Areas **
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Homeless or affected by housing exclusion **"
+                  id="financial10" name="financial[]" />
+                <label class="form-check-label" for="financial10">
+                  Homeless or affected by housing exclusion **
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Living in a jobless household" id="financial11"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial11">
+                  Living in a jobless household
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                  value="Living in a jobless household with dependent children" id="financial12" name="financial[]" />
+                <label class="form-check-label" for="financial12">
+                  Living in a jobless household with dependent children
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                  value="Living in a single adult household with dependent children" id="financial13"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial13">
+                  Living in a single adult household with dependent children
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Long-term physical illness / condition **"
+                  id="financial14" name="financial[]" />
+                <label class="form-check-label" for="financial14">
+                  Long-term physical illness / condition **
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Long-term unemployed **" id="financial15"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial15">
+                  Long-term unemployed **
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Looked after young person ***" id="financial16"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial16">
+                  Looked after young person ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Low income employed ***" id="financial17"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial17">
+                  Low income employed ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                  value="Low income (social inclusion and poverty only) ***" id="financial18" name="financial[]" />
+                <label class="form-check-label" for="financial18">
+                  Low income (social inclusion and poverty only) ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Low skilled ***" id="financial19"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial19">
+                  Low skilled ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Material Deprivation ***" id="financial20"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial20">
+                  Material Deprivation ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Mental health issues ***" id="financial21"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial21">
+                  Mental health issues ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                  value="Migrants, people with a foreign background, minorities (including marginalised communities such as the Roma) **"
+                  id="financial22" name="financial[]" />
+                <label class="form-check-label" for="financial22">
+                  Migrants, people with a foreign background, minorities
+                  (including marginalised communities such as the Roma) **
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="No or Limited work experience ***"
+                  id="financial23" name="financial[]" />
+                <label class="form-check-label" for="financial23">
+                  No or Limited work experience ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                  value="Primary carer of a child/children (under 18) or adult ***" id="financial24"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial24">
+                  Primary carer of a child/children (under 18) or adult ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Primary carer of older person ***"
+                  id="financial25" name="financial[]" />
+                <label class="form-check-label" for="financial25">
+                  Primary carer of older person ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Refugee ***" id="financial26"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial26">
+                  Refugee ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Substance related conditions ***"
+                  id="financial27" name="financial[]" />
+                <label class="form-check-label" for="financial27">
+                  Substance related conditions ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Underemployed ***" id="financial28"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial28">
+                  Underemployed ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Employed Status affected by Covid-19 ***"
+                  id="financial29" name="financial[]" />
+                <label class="form-check-label" for="financial29">
+                  Employed Status affected by Covid-19 ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                  value="Young People aged &lt; 25 impacted by Covid-19 ***" id="financial30" name="financial[]" />
+                <label class="form-check-label" for="financial30">
+                  Young People aged &lt; 25 impacted by Covid-19 ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                  value="Households where the youngest dependent is aged less than 1 ***" id="financial31"
+                  name="financial[]" />
+                <label class="form-check-label" for="financial31">
+                  Households where the youngest dependent is aged less than 1
+                  ***
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Households with 3 dependents or more ***"
+                  id="financial32" name="financial[]" />
+                <label class="form-check-label" for="financial32">
+                  Households with 3 dependents or more ***
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- <div class="form-group mb-0">
+            <label language="en" class="form-control-label">
+              Are you registered with the Jobcenter or Agentur für Arbeit?*
+            </label>
+            <label language="ge" class="form-control-label">
+              Sind Sie beim Jobcenter oder der Agentur für Arbeit
+              registriert?*
+            </label>
+            <br />
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="registered" id="inlineRadio23" value="Yes" required />
+              <label language="en" class="form-check-label" for="inlineRadio23">Yes</label>
+              <label language="ge" class="form-check-label" for="inlineRadio32">Ja</label>
+            </div>
+            <div class="form-check form-check-inline mr-0">
+              <input class="form-check-input" type="radio" name="registered" id="inlineRadio24" value="No" required />
+            </div>
+            <label language="en" class="form-check-label" for="inlineRadio24">No</label>
+            <label language="ge" class="form-check-label" for="inlineRadio24">Nein</label>
+          </div>
+
+          <div style="padding-top: 13px">
+            <div class="form-group">
+              <label class="form-control-label" id="regInpLabel">Please mention the location of the Jobcenter you're
+                registered with.</label>
+              <input class="form-control" type="text" name="regYes" id="regYes" />
+            </div>
+          </div> -->
+
+
+
+
+          <!-- Are You Unemplyed -->
+          <div class="form-group mb-0">
+            <label language="en" class="form-control-label">
+              Are you Unemployed?*
+            </label>
+            <label language="ge" class="form-control-label">
+              Bist du arbeitslos?*
+            </label>
+            <br />
+
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="AreYouUnemployed" id="AreYouUnemployed" value="Yes"
+                required />
+              <label language="en" class="form-check-label" for="AreYouUnemployed">Yes</label>
+              <label language="ge" class="form-check-label" for="AreYouUnemployed">Ja</label>
+            </div>
+            <div class="form-check form-check-inline mr-0">
+              <input class="form-check-input" type="radio" name="AreYouUnemployed" id="AreYouUnemployed2" value="No"
+                required />
+            </div>
+            <label language="en" class="form-check-label" for="AreYouUnemployed2">No</label>
+            <label language="ge" class="form-check-label" for="AreYouUnemployed2">Nein</label>
+          </div>
+
+          <!-- Period of unemployment -->
+          <div style="padding-top: 13px">
+            <div class="form-group">
+              <label class="form-control-label" id="periodOfUnemployment">Please mention the period of
+                unemployment</label>
+              <select class="form-control form-inline " name="periodOfUnemployment" id="periodOfUnemploymentSelect">
+                <option language="en" value="" disabled selected hidden>
+                  Please select
+                </option>
+                <option language="en" value="Less than 12 months">
+                  Less than 12 months
+                </option>
+                <option language="ge" value="Less than 12 months">
+                  Weniger als 12 Monate
+                </option>
+                <option language="en" value="More than 12 months">
+                  More than 12 months
+                </option>
+                <option language="ge" value="More than 12 months">
+                  Mehr als 12 Monate
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Are you registered in job centre -->
+          <div class="form-group mb-0">
+            <label language="en" class="form-control-label">
+              Are you registered in job centre?*
+            </label>
+            <label language="ge" class="form-control-label">
+              Sie sind im Jobcenter gemeldet?*
+            </label>
+            <br />
+
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="AreYouRegisteredInJobCentre"
+                id="AreYouRegisteredInJobCentre" value="Yes" required />
+              <label language="en" class="form-check-label" for="AreYouRegisteredInJobCentre">Yes</label>
+              <label language="ge" class="form-check-label" for="AreYouRegisteredInJobCentre">Ja</label>
+            </div>
+            <div class="form-check form-check-inline mr-0">
+              <input class="form-check-input" type="radio" name="AreYouRegisteredInJobCentre"
+                id="AreYouRegisteredInJobCentre2" value="No" required />
+            </div>
+            <label language="en" class="form-check-label" for="AreYouRegisteredInJobCentre2">No</label>
+            <label language="ge" class="form-check-label" for="AreYouRegisteredInJobCentre2">Nein</label>
+          </div>
+
+          <div style="padding-top: 13px">
+            <div class="form-group">
+              <label class="form-control-label" language="en" id="PleaseMentionYourJobLocation">Please mention the
+                location</label>
+              <label class="form-control-label" language="ge" id="PleaseMentionYourJobLocation">Bitte erwähnen Sie den
+                Standort</label>
+
+              <input class="form-control" type="text" name="PleaseMentionYourJobLocation"
+                id="PleaseMentionYourJobLocationSelect" />
+            </div>
+          </div>
+
+          <!-- Are you registered in employment centre -->
+
+          <div class="form-group mb-0">
+            <label language="en" class="form-control-label">
+              Are you registered in employment centre?*
+            </label>
+            <label language="ge" class="form-control-label">
+              Sind Sie beim Arbeitsamt gemeldet??*
+            </label>
+            <br />
+
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="AreYouRegisteredInEmploymentCentre"
+                id="AreYouRegisteredInEmploymentCentre" value="Yes" required />
+              <label language="en" class="form-check-label" for="AreYouRegisteredInEmploymentCentre">Yes</label>
+              <label language="ge" class="form-check-label" for="AreYouRegisteredInEmploymentCentre">Ja</label>
+            </div>
+            <div class="form-check form-check-inline mr-0">
+              <input class="form-check-input" type="radio" name="AreYouRegisteredInEmploymentCentre"
+                id="AreYouRegisteredInEmploymentCentre2" value="No" required />
+            </div>
+            <label language="en" class="form-check-label" for="AreYouRegisteredInEmploymentCentre2">No</label>
+            <label language="ge" class="form-check-label" for="AreYouRegisteredInEmploymentCentre2">Nein</label>
+          </div>
+
+          <div style="padding-top: 13px">
+            <div class="form-group">
+              <label class="form-control-label" language="en" id="pleaseMentionYourEmploymentCentre">Please mention the
+                location</label>
+              <label class="form-control-label" language="ge" id="pleaseMentionYourEmploymentCentre">Bitte erwähnen Sie
+                den Standort</label>
+
+
+              <input class="form-control" type="text" name="pleaseMentionYourEmploymentCentre"
+                id="pleaseMentionYourEmploymentCentreSelect" />
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label language="en" class="form-control-label">How did you hear about us?*</label>
+            <label language="ge" class="form-control-label">Woher haben Sie von uns gehört?*</label>
+            <select class="form-control" name="howhear" onchange="checkvalue(this.value)" required>
+              <option value="" disabled selected hidden>Please select</option>
+              <option value="Facebook">Facebook</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Google Search">Google Search</option>
+              <option value="YouTube">YouTube</option>
+              <option value="Twitter">Twitter</option>
+              <option value="Others">Others</option>
+            </select>
+            <input class="form-control mt-3" type="text" placeholder="Please specify*" name="howother"
+              id="howhearinp" />
+          </div>
+
+          <div class="form-group" data-for="message">
+            <label class="form-control-label" for="message-form1-2w">Message*</label>
+            <textarea type="text" class="form-control" name="message" rows="4" required
+              pattern="(.*[a-zA-Z].*)"></textarea>
+          </div>
+
+
+
+
+          <div class="form-group mb-0 mt-2">
+            <input type="checkbox" name="privacy" id="pp" required />
+            <label language="en" for="pp">I've read and accept the
+              <a target="_blank" href="privacy-policy">Privacy Policy*</a>
+            </label>
+            <label language="ge" for="pp">Ich habe die gelesen und akzeptiere sie
+              <a target="_blank" href="privacy-policy">Datenschutz-Bestimmungen*</a>
+            </label>
+          </div>
+          <div class="form-group d-flex justify-content-start align-items-start">
+            <input type="checkbox" name="gdrp" id="ppp" />
+            <label language="en" for="ppp" style="padding-left: 4px;"> I would like to receive emails updates with
+              discounts, event information, new services and products.
+            </label>
+            <label language="ge" for="ppp" style="padding-left: 4px;">Ich möchte E-Mail-Updates mit Rabatten,
+              Veranstaltungsinformationen, neuen Dienstleistungen und Produkten erhalten.
+            </label>
+          </div>
+
+
+
+
+
+          <span class="input-group-btn ml-1">
+            <button type="submit" class="btn ml-0 btn-form display-4 sub-btn" name="btn-send">
+              SUBMIT
+            </button>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+<style>
+    .float-btn {
+        position: fixed;
+        background-color:#221d4f;
+        border: 1px solid #0beaca;
+        color: white;
+        padding: 15px 15px 15px 15px;
+        top: 50%;
+        right: 0;
+        text-decoration: none;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+        z-index: 10000;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        animation: come-in 1000ms 3000ms forwards;
+        /* opacity: 0; */
+        z-index: 4;
+    }
+    .float-btn:hover {
+        position: fixed;
+        background-color:#221d4f;
+        border: 1px solid #0beaca;
+        color: white;
+        padding: 15px 15px 15px 15px;
+        top: 50%;
+        right: 0;
+        text-decoration: none;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+        z-index: 10000;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        animation: come-in 1000ms 3000ms forwards;
+        /* opacity: 0; */
+        z-index: 4;
+    }
+</style>

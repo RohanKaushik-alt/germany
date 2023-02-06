@@ -1,0 +1,166 @@
+<!-- Tawk script -->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"),
+      s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = "https://embed.tawk.to/5f7c68374704467e89f517a4/default";
+    s1.charset = "UTF-8";
+    s1.setAttribute("crossorigin", "*");
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->
+
+<nav class="commonNavbar navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a href="/">
+      <img
+        class="navLogoMob"
+        src="old_assets/Images/logo.png"
+        alt="Primed Talent"
+      />
+      <img
+        class="navLogo"
+        src="assets/images/test/logo.png"
+        alt="Primed Talent"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <div id="hamburger" onclick="this.classList.toggle('open');">
+        <svg width="50" height="50" viewBox="0 0 100 100">
+          <path
+            class="line line1"
+            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+          />
+          <path class="line line2" d="M 20,50 H 80" />
+          <path
+            class="line line3"
+            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+          />
+        </svg>
+      </div>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="commonNavbarNav navbar-nav ml-auto mb-2">
+        <li class="nav-item commonNavItem">
+          <a class="commonNavLink nav-link" aria-current="page" href="/"
+            >Home</a
+          >
+        </li>
+        <!-- <li class="nav-item commonNavItem dropdown">
+          <a
+            class="commonNavLink nav-link dropdown-toggle"
+            id="navbarDropdown1"
+            role="button"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Recruitment
+          </a>
+
+          <div
+            class="commonBigDropdownMenu dropdown-menu"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item w-100 d-block my-2" href="corporate-talent"
+              >Corporate Talent</a
+            >
+
+            <a class="dropdown-item d-block" href="staffing-expertise"
+              >Staffing Expertise</a
+            >
+          </div>
+        </li> -->
+        <li class="nav-item commonNavItem dropdown">
+          <a
+            class="commonNavLink nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown2"
+            role="button"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+          100% Funded Course
+          </a>
+
+          <div
+            class="commonBigDropdownMenu dropdown-menu"
+            aria-labelledby="navbarDropdown2"
+          >
+            <!-- <a class="dropdown-item d-block my-2" href="csr-talent">CSR Talent</a> -->
+            <a class="dropdown-item d-block" href="aws-restart">AWS re/Start</a>
+            <!-- <a class="dropdown-item d-block" href="cloud-computing-program">Cloud Computing Courses</a> -->
+            <a class="dropdown-item d-block" href="Bildungsgutschein">Bildungsgutschein</a>
+
+          </div>
+        </li>
+        <li>
+          <a class="commonNavLink nav-link" href="/contact-us">Contact Us</a>
+        </li>
+
+        <div class="switch ms-2">
+          <input
+            id="language-toggle"
+            class="check-toggle check-toggle-round-flat"
+            type="checkbox"
+          />
+          <label for="language-toggle"></label>
+          <span class="ge">DE</span>
+          <span class="en">EN</span>
+        </div>
+
+        <!-- <li class="nav-item commonNavItem">
+          <a class="commonNavLink nav-link" href="/contact-us">
+            <button class="btn btn-danger">Contact Us</button>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  if (localStorage.getItem("lang") === null) {
+    localStorage.setItem("lang", "ge");
+  }
+  var lang = localStorage.getItem("lang");
+
+  $("[language]").hide();
+  $(".switch").hide();
+  $("html").show();
+
+  if (lang === "en") {
+    $('[language="en"]').show();
+    $('[language="ge"]').remove();
+    $("#language-toggle").prop("checked", true);
+    $(".switch").show();
+  } else if (lang === "ge") {
+    $('[language="ge"]').show();
+    $('[language="en"]').remove();
+    $("#language-toggle").prop("checked", false);
+    $(".switch").show();
+  }
+
+  $("#language-toggle").change(function () {
+    setTimeout(() => {
+      window.location.reload();
+    }, 300);
+    if (this.checked) {
+      localStorage.setItem("lang", "en");
+    } else if (!this.checked) {
+      localStorage.setItem("lang", "ge");
+    }
+  });
+</script>
